@@ -1,0 +1,90 @@
+/* Body and background */
+body {
+    background: radial-gradient(circle, rgba(0, 0, 30, 1) 0%, rgba(0, 0, 50, 1) 50%, rgba(0, 0, 80, 1) 100%); /* Dark space gradient */
+    color: #fff; /* Light text color for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Ma Shan Zheng', cursive; /* Apply Ma Shan Zheng font globally */
+    background-image: url('https://yourimageurl.com/space-background.jpg'), radial-gradient(circle, rgba(0, 0, 30, 1) 0%, rgba(0, 0, 50, 1) 50%, rgba(0, 0, 80, 1) 100%);
+    background-size: cover; /* Make background cover the whole page */
+    background-position: center;
+}
+
+/* Header section */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Add a blur effect */
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ff00ff; /* Neon purple for space feel */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Ma Shan Zheng', cursive; /* Apply to header */
+}
+
+/* Button Section */
+.buttons-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+    gap: 20px;
+    max-width: 800px;
+    padding: 20px;
+}
+
+button {
+    background-color: #00bfff; /* Bright cyan, space feel */
+    border: none;
+    border-radius: 25px; /* Rounder buttons */
+    color: white;
+    font-size: 1.3em;
+    padding: 20px 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Ma Shan Zheng', cursive; /* Apply to buttons */
+}
+
+button:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    background-color: #32cd32; /* Neon green on hover for cosmic effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.98); /* Slightly shrink when clicked */
+}
+
+/* Button focus effect */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+}
+
+/* Responsive button layout */
+@media screen and (max-width: 768px) {
+    .button-container {
+        grid-template-columns: 1fr 1fr; /* 2 buttons per row on small screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button-container {
+        grid-template-columns: 1fr; /* 1 button per row on extra small screens */
+    }
+}
